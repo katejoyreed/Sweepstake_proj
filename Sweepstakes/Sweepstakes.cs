@@ -32,7 +32,9 @@ namespace Sweepstakes
 
         public void ContestantPickWinner()
         {
-
+            List<Contestant> _contestants = new List<Contestant>(contestants.Values);
+            Random rand = new Random();
+            Contestant randContestant = _contestants[rand.Next(_contestants.Count)];
         }
 
         public void PrintContestantInfo(Contestant contestant)
