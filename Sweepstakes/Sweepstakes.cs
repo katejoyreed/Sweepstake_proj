@@ -18,5 +18,25 @@ namespace Sweepstakes
             Name = name;
             contestants = new Dictionary<int, Contestant>();
         }
+
+        public void _Sweepstakes(string name)
+        {
+
+        }
+
+        public void RegisterContestant(Contestant contestant)
+        {
+
+        }
+
+        public void ContestantPickWinner()
+        {
+
+        }
+
+        public void PrintContestantInfo(Contestant contestant)
+        {
+
+        }
     }
 }
