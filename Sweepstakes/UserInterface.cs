@@ -8,5 +8,11 @@ namespace Sweepstakes
 {
     class UserInterface
     {
+        public static string GetUserInput(string prompt)
+        {
+            Console.WriteLine(prompt);
+            string userInput = Console.ReadLine();
+            return userInput;
+        }
     }
 }
