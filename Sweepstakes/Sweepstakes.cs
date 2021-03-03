@@ -26,7 +26,8 @@ namespace Sweepstakes
 
         public void RegisterContestant(Contestant contestant)
         {
-
+            contestant = new Contestant();
+            contestants.Add(contestant.registrationNumber, contestant) ;
         }
 
         public void ContestantPickWinner()

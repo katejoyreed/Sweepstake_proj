@@ -18,7 +18,9 @@ namespace Sweepstakes
             firstName = GetUserInput("What is your first name?");
             lastName = GetUserInput("What is your last name?");
             emailAddress = GetUserInput("Please enter your email address:");
-
+            Random _random = new Random();
+            int randomKey = _random.Next();
+            registrationNumber = randomKey;
         }
     }
 }
