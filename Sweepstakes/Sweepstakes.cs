@@ -19,15 +19,19 @@ namespace Sweepstakes
             contestants = new Dictionary<int, Contestant>();
         }
 
-        public void _Sweepstakes(string name)
-        {
-
-        }
 
         public void RegisterContestant(Contestant contestant)
         {
             contestant = new Contestant();
-            contestants.Add(contestant.registrationNumber, contestant) ;
+            if (contestants.ContainsKey(contestant.registrationNumber))
+            {
+                contestant = new Contestant();
+            }
+            else 
+            {
+                contestants.Add(contestant.registrationNumber, contestant);
+            }
+            
         }
 
         public void ContestantPickWinner()
@@ -39,7 +43,9 @@ namespace Sweepstakes
 
         public void PrintContestantInfo(Contestant contestant)
         {
-
+            Console.WriteLine($"Contestant name: {contestant.firstName} {contestant.lastName}; " +
+                $"contestant email: {contestant.emailAddress}; registration number: " +
+                $"{contestant.registrationNumber}"); 
         }
     }
 }

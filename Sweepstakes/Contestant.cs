@@ -22,5 +22,7 @@ namespace Sweepstakes
             int randomKey = _random.Next();
             registrationNumber = randomKey;
         }
+
+        
     }
 }
