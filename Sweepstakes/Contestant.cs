@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class Contestant
+    class Contestant : UserInterface
     {
+        public string firstName;
+        public string lastName;
+        public string emailAddress;
+        public int registrationNumber;
     }
 }

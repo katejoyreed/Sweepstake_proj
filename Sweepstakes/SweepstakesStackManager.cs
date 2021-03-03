@@ -8,6 +8,6 @@ namespace Sweepstakes
 {
     class SweepstakesStackManager
     {
-        Stack<Sweepstakes> stack;
+       private Stack<Sweepstakes> stack;
     }
 }

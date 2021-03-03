@@ -8,6 +8,6 @@ namespace Sweepstakes
 {
     class SweepstakesQueueManager
     {
-        Queue<Sweepstakes> queue;
+       private Queue<Sweepstakes> queue;
     }
 }
