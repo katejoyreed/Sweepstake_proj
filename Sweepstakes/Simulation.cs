@@ -26,7 +26,7 @@ namespace Sweepstakes
             else 
             {
                 Console.WriteLine("Please make a valid selection");
-                SelectManager();
+                CreateMarketingFirmWithManager();
             }
         }
     }
