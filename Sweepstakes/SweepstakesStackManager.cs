@@ -20,6 +20,10 @@ namespace Sweepstakes
             stack.Push(sweepstakes);
         }
 
-
+        public Sweepstakes GetSweepstakes()
+        {
+            Sweepstakes sweepstakes = stack.Pop();
+            return sweepstakes;
+        }
     }
 }
