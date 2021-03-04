@@ -20,7 +20,11 @@ namespace Sweepstakes
             queue.Enqueue(sweepstakes);
         }
 
-
+        public Sweepstakes GetSweepstakes()
+        {
+            Sweepstakes sweepstakes = queue.Dequeue();
+            return sweepstakes;
+        }
         
     }
 }
