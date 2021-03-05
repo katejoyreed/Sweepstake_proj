@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class Contestant : UserInterface
+    class Contestant : UserInterface, IObservable<Contestant>
     {
         public string firstName;
         public string lastName;
         public string emailAddress;
         public int registrationNumber;
+        List<IObserver<Contestant>> observers = new List<IObserver<Contestant>>();
 
         public Contestant()
         {
@@ -23,6 +24,15 @@ namespace Sweepstakes
             registrationNumber = randomKey;
         }
 
-        
+
+        public IDisposable Subscribe(IObserver<Contestant> observer)
+        {
+            if (! observers.Contains(observer))
+            {
+                observers.Add(observer);
+            }
+            
+        }
+       
     }
 }
